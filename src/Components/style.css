@@ -1,0 +1,9 @@
+#body{
+    height: auto;
+    /* background: linear-gradient(200deg, #e7195e, #e7195e, #0b6992, #0b6992); */
+    background: linear-gradient(0deg, darkgreen , black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
