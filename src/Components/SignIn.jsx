@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-function Login({ setIsLoggedIn }) {
+function SignIn () {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,9 +21,9 @@ function Login({ setIsLoggedIn }) {
       return
     }
 
-    if (name) {
-      return
-    }
+    // if (name) {
+    //   return
+    // }
 
     if (!email) {
       setMessage("Please enter your email! 😞");
@@ -58,18 +58,19 @@ function Login({ setIsLoggedIn }) {
     );
 
     if (foundUser) {
-      setMessage(`Login Successful 😎 Welcome ${foundUser.name}`);
+      setMessage(`Login Successful 😎 Welcome "${foundUser.name}"`);    
       
-      setIsLoggedIn(true);
-
       // Reset Inputs
       setName("");
       setEmail("");
       setPassword("");
+      
+      return;
     }
 
     // Case 4: Nothing matches (both wrong)
     setMessage("Don’t have any account with this email & password 🧐");
+
   }
 
   return (
@@ -118,4 +119,4 @@ function Login({ setIsLoggedIn }) {
   );
 }
 
-export default Login;
+export default SignIn;
